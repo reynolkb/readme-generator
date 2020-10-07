@@ -1,6 +1,6 @@
 const showLicense = license => {
-    if (license === "MIT") {
-        return `
+        if (license === "MIT") {
+                return `
 MIT License
 
 Copyright (c) [2020]
@@ -22,8 +22,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`
-    } else {
-        return `
+        } else {
+                return `
         GNU GENERAL PUBLIC LICENSE
         Version 3, 29 June 2007
 
@@ -673,7 +673,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Also add information on how to contact you by electronic and paper mail.
 
 If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
@@ -698,13 +697,13 @@ For more information on this, and how to apply and follow the GNU GPL, see
 the library.If this is what you want to do, use the GNU Lesser General
         Public License instead of this License.But first, please read
             < https://www.gnu.org/licenses/why-not-lgpl.html>.`
-    }
+        }
 }
 
 module.exports = templateData => {
-    const { ...data } = templateData;
+        const { ...data } = templateData;
 
-    return `
+        return `
 ![screenshot of badge](https://img.shields.io/badge/license-${data.license}-blue.svg)
 
 # ${data.projectTitle}
