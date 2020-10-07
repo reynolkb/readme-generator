@@ -1,4 +1,5 @@
 const showLicense = license => {
+        // if license picked is MIT then display the MIT license
         if (license === "MIT") {
                 return `
 MIT License
@@ -22,7 +23,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`
-        } else {
+        }
+        // if license picked is not MIT then display the GPLv3 license 
+        else {
                 return `
         GNU GENERAL PUBLIC LICENSE
         Version 3, 29 June 2007
@@ -702,8 +705,10 @@ the library.If this is what you want to do, use the GNU Lesser General
 }
 
 module.exports = templateData => {
+        // destructuring all the data to generate the readme
         const { ...data } = templateData;
 
+        // return statement for printing out the actual readme
         return `
 ![screenshot of badge](https://img.shields.io/badge/license-${data.license}-blue.svg)
 

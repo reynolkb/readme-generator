@@ -124,16 +124,21 @@ const promptProject = () => {
     ]);
 };
 
+// run the initial prompt of questions
 promptProject()
+    // run the generate page function
     .then(projectData => {
         return generatePage(projectData);
     })
+    // write the file with the data from the user
     .then(readmePage => {
         return writeFile(readmePage);
     })
+    // return the response if succeeded or not
     .then(writeFileResponse => {
         console.log(writeFileResponse);
     })
+    // else log the error
     .catch(err => {
         console.log(err);
     });
